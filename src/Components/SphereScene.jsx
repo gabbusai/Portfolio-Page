@@ -12,9 +12,11 @@ import { BlendFunction } from 'postprocessing'
 function SphereScene() {
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
     const [portrait, setPortrait] = useState(false)
-    const { nodes, materials, scene } = useGLTF('src/assets/wireframe_sphere.glb')
+    
+    //const { nodes, materials, scene } = useGLTF('src/assets/wireframe_sphere.glb')
+    const { nodes, materials, scene } = useGLTF('public/wireframe_sphere.glb')
     const sceneMesh = useRef()
-    useGLTF.preload('src/assets/wireframe_sphere.glb')
+    useGLTF.preload('public/wireframe_sphere.glb')
 
     const { scrollYProgress } = useScroll(sceneMesh)
     const rotateTrans = useTransform(scrollYProgress, [0, 1], [0, 3]);

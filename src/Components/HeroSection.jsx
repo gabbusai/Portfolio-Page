@@ -4,8 +4,8 @@ import { Canvas } from '@react-three/fiber'
 import { Environment, Html, useProgress } from '@react-three/drei'
 import SphereScene from './SphereScene'
 import { useMediaQuery } from 'react-responsive'
-import grainy02 from '../assets/grainy02.jpg'
-import noise from '../assets/noise.jpg'
+import grainy02 from '../../public/grainy02.jpg'
+import noise from '../../public/noise.jpg'
 import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion'
 import { Bars } from 'react-loader-spinner'
 import TitleText from './TitleText'
@@ -17,7 +17,7 @@ const COLORS = [ '#0d0e14', '#5d547c', '#0f0f0f'];
         if (!active) return null;
       
         return (
-          <Html center style={{ color: 'rgb(0,0,0)', backgroundColor: '#0f0f0f' }}>
+          <Html center style={{ color: 'white', backgroundColor: '#0f0f0f' }}>
             <Bars
                 height="180"
                 width="180"

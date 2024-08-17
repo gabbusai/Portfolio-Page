@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import React from 'react'
-import grainy from '../assets/grainy.jpg'
-import grunge from '../assets/grunge.jpg'
+import grainy from '../../public/grainy.jpg'
+import grunge from '../../public/grunge.jpg'
 function GrainyBg() {
   return (
     <div>

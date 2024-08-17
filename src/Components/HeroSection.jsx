@@ -4,8 +4,8 @@ import { Canvas } from '@react-three/fiber'
 import { Environment, Html, useProgress } from '@react-three/drei'
 import SphereScene from './SphereScene'
 import { useMediaQuery } from 'react-responsive'
-import grainy02 from '../../public/grainy02.jpg'
-import noise from '../../public/noise.jpg'
+import grainy02 from '/grainy02.jpg'
+import noise from '/noise.jpg'
 import { motion, animate, useMotionTemplate, useMotionValue } from 'framer-motion'
 import { Bars } from 'react-loader-spinner'
 import TitleText from './TitleText'
@@ -52,7 +52,7 @@ function HeroSection({contactButtonHandler}) {
 
 
     return (
-        <div className="md:relative overflow-hidden sm:overflow-hidden">
+        <div className="md:relative overflow-hidden sm:overflow-hidden sm:max-sm">
         
             <motion.section className='z-5 sm:overflow-y-hidden h-screen w-screen md:grid grid-cols-12 sm:block'
             style={{ 
@@ -60,7 +60,7 @@ function HeroSection({contactButtonHandler}) {
             }}>
  
                 <div className="col-span-6 ">
-                    <motion.p className='text-center text-zinc-50 lg:text-[95px]  md:text-[70px] sm:text-[44px] md:w-full mb-[-20px] 
+                    <motion.p className='text-center text-zinc-50 xl:text-[95px]  md:text-[70px] sm:text-[44px] md:w-full mb-[-20px] 
                     mt-[208px] ml-16 font-thin font-spaceMono'
                     >
                         <TitleText/>
@@ -82,7 +82,7 @@ function HeroSection({contactButtonHandler}) {
                 </div>
 
 
-                <Canvas className='col-span-6 md:scale-100 w-full z-[0]' >
+                <Canvas className='col-span-6 md:scale-20 w-full z-[0]' >
                 <Suspense fallback={<TheLoader />}>
                     <Environment
                         preset="studio"

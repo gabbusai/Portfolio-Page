@@ -37,8 +37,8 @@ function AccordionCanvas(){
     const smoothScale = useSpring(scaleTrans, 10)
     const smoothRotate = useSpring(rotateTrans, 10)
     return (
-        <div className="h-[56rem] w-screen z-0">
-            <Canvas className=" "
+        <div className="sm:h-[150vh] md:h-screen w-screen z-0">
+            <Canvas className=""
             ref={sceneRef}>
             <Suspense fallback={<TheLoader />}>
             
@@ -55,9 +55,9 @@ function AccordionCanvas(){
 
                     <motion.mesh
                     ref={sceneRef}
-                    position={isPortrait? [0,.3,-1]:[0,0,-1]}
+                    position={isPortrait? [0,2,-1]:[0,0,-1]}
                     rotation={[smoothRotate,0,0]}
-                    scale={isPortrait ? 0.34: smoothScale}>
+                    scale={isPortrait ? 0.22: smoothScale}>
 
                         <Html
                         className="shadow-2xl"

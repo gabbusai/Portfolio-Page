@@ -48,7 +48,7 @@ function NavBar({tabs}) {
                         }}
                         />
                     )}
-                    <span className='z-10 relative font-dmSans text-[24px] mix-blend-exclusion'
+                    <span className='z-10 relative font-dmSans sm:text-[16px] md:text-[24px] mix-blend-exclusion'
                     >
                         {tab.title}
                     </span>

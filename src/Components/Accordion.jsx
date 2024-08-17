@@ -2,9 +2,9 @@ import { motion } from 'framer-motion'
 import React, {useEffect, useRef, useState } from 'react'
 import AccordionItem from './AccordionItem';
 import overlay01 from '../../public/overlay01.jfif'
-import fakeDex from '../../public/FakeDex-01.png';
-import thoughtsApp from '../../public/ThoughtsApp-01.png';
-import portfolioPage from '../../public/PortfolioPage-01.png';
+import fakeDex from '/FakeDex-01.png';
+import thoughtsApp from '/ThoughtsApp-01.png';
+import portfolioPage from '/PortfolioPage-01.png';
 import CircularProgress from './CircularProgress';
 
 

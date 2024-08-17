@@ -44,7 +44,7 @@ function TransitionSection() {
             </p>
         </div>
 
-        <div className="grid place-items-center">
+        <div className="grid place-items-center sm:h-[150vh] lg:h-screen">
             <AccordionCanvas /> 
         </div>
         

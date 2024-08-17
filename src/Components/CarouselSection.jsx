@@ -3,7 +3,7 @@ import CarouselCard from './CarouselCard'
 import { FaChevronLeft, FaChevronRight  } from "react-icons/fa";
 import {motion, useAnimation, useInView, useMotionTemplate, useMotionValue, useTransform } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
-import noise from '../../public/noise.jpg'
+import noise from '/noise.jpg'
 import { FaReact, FaLaravel, FaUserGraduate, FaCloud   } from "react-icons/fa";
 import { FaComputer } from "react-icons/fa6";
 

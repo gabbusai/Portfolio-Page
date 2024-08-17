@@ -10,6 +10,8 @@ function FooterIcon({item}){
         <motion.div className='h-52 w-52 rounded-full flex flex-col'
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onTouchStart={()=> setIsHovered(true)}
+        onTouchEnd={()=> setIsHovered(false)}
         animate={isHovered ? {scale: 1.2} : {scale:.9} }
         whileHover={{ 
             background:'#0C0C0C',

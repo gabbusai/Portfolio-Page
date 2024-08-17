@@ -32,9 +32,6 @@ function SphereScene() {
         }
         
     }, [isPortrait])
-
-
-
     
 return (
     <motion.group scale={2}

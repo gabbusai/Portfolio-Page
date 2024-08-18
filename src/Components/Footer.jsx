@@ -49,6 +49,7 @@ function FooterIcon({item}){
                     duration: .7,
                  }}
                  exit={{ 
+                    opacity: [1,0.1,0],
                     translateY: -100,
                     scale: .3,
                   }}

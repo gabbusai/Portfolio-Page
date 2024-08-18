@@ -15,23 +15,23 @@ function CarouselSection() {
     const [carouselData, setCarouselData] = useState([
         {
             id: 1, title: 'Current Status and Education', content: 'Currently a 4th Year BS Information Technology student in Systems Plus College Foundation', 
-            color: "#4793AF", iconComponent: <FaUserGraduate size={iconsize} color={iconColor} className="m-auto mb-2"/>
+            color: "#2c3e50", iconComponent: <FaUserGraduate size={iconsize} color={iconColor} className="m-auto mb-2"/>
         },
         {
             id: 2, title: 'Computer Skills', content: 'I have a basic understanding of networking and computer troubleshooting and other programming languages such as VB.Net, C#, C++, Java, Python, JS, TS and PHP', 
-            color: "#FFC470", iconComponent: <FaComputer size={iconsize} color={iconColor} className="m-auto mb-2"/> 
+            color: "#e67e22", iconComponent: <FaComputer size={iconsize} color={iconColor} className="m-auto mb-2"/> 
         },
         {
-            id: 3, title: 'Development Skills [Front-End]', content: 'I have experience with plain HTML, CSS and JavaScript and also has knowledge with React.JS', 
-            color: "#D37676", iconComponent: <FaReact size={iconsize} color={iconColor} className="m-auto mb-2"/>
+            id: 3, title: 'Development [Front-End]', content: 'I have experience with plain HTML, CSS and JavaScript and also has knowledge with React.JS', 
+            color: "#3498db", iconComponent: <FaReact size={iconsize} color={iconColor} className="m-auto mb-2"/>
         },
         {
-            id: 4, title: 'Development Skills [Back-End]', content: 'Developed personal/school projects using PHP, MySQL and modern MVC framework Laravel.', 
-            color: "#FF76CE", iconComponent: <FaLaravel size={iconsize} color={iconColor} className="m-auto mb-2"/> 
+            id: 4, title: 'Development [Back-End]', content: 'Developed personal/school projects using PHP, MySQL and modern MVC framework Laravel.', 
+            color: "#e74c3c", iconComponent: <FaLaravel size={iconsize} color={iconColor} className="m-auto mb-2"/> 
         },
         {
             id: 5, title: 'Cloud Services', content: 'Previously used AWS and Vercel for Deployment! Though I could learn more in this department.', 
-            color: "#C3E2C2",  iconComponent: <FaCloud  size={iconsize} color={iconColor} className="m-auto mb-2"/>
+            color: "#f1c40f",  iconComponent: <FaCloud  size={iconsize} color={iconColor} className="m-auto mb-2"/>
         }
     ])
     
@@ -62,7 +62,7 @@ function CarouselSection() {
     return (
     <section className='h-[120vh] w-screen m-auto relative overflow-hidden bg-zinc-800'>
         <div className="top-[10vh] relative mt-[150px] h-[800px] sm:w-full overflow-x-hidden overflow-y-hidden">
-            <motion.div className="mt-10 relative flex flex-row w-[170vw] lg:gap-x-0 md:gap-x-0 sm:gap-x-10 h-[700px] px-[100px]
+            <motion.div className="mt-10 relative flex flex-row w-[170vw] md:gap-x-0 sm:gap-x-10 h-[700px] px-[100px]
             transition-transform ease-out duration-500" ref={carouselRef}
             style={{
                 transform: `translateX(-${curr * translateVal}% )`

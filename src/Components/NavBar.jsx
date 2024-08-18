@@ -3,25 +3,26 @@ import React, { useState } from 'react'
 
 function NavBar({tabs}) {
     const [selectedTab, setSelectedTab] = useState(tabs[0].id);
-
+    const [isHovered, setHovered] = useState(false);
     const selectHandler = (tab) => {
-        setSelectedTab(tab.id)
+        //setSelectedTab(tab.id)
         tab.tabRef.current?.scrollIntoView({
             behavior:'smooth'
         });
     }
 
   return (
-    <motion.div className="flex space-x-1 bg-zinc-950 py-2 justify-center lg:w-[40vw] sm:w-screen m-auto rounded-[40px] gap-x-3"
+    <motion.div className="flex space-x-1 bg-zinc-950 py-2 justify-center lg:w-[40vw] mb-2 sm:w-screen m-auto rounded-[40px] gap-x-3 translate-y-[5px]"
     transition={{ 
         duration: .5,
         type: 'spring'
      }}
     onMouseLeave={()=> {
-        setTimeout(() =>{
+        /*setTimeout(() =>{
             setSelectedTab(900)
         }, 1000)
-        
+        */
+        setHovered(false);
     }}
     >
         {
@@ -29,6 +30,7 @@ function NavBar({tabs}) {
                 <motion.button
                 key={tab.id}
                 onClick={() => selectHandler(tab)}
+                onMouseEnter={() => {setSelectedTab(tab.id); setHovered(true)}}
                 whileHover={{ 
                     scale: 1.2
                 }}
@@ -39,9 +41,12 @@ function NavBar({tabs}) {
                 >
                     {selectedTab === tab.id  && (
                         <motion.div className=" bg-stone-50 absolute inset-0"
+                        animate={isHovered ? {opacity: 1} : {opacity: 0}}
                         layoutId='pill'
                         transition={{ 
-                            type: "spring",
+                            type: 'fade',
+                            //ease: "easeIn",
+                            duration:0.1
                         }}
                         style={{ 
                             borderRadius: 9999

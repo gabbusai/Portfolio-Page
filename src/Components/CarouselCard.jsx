@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
+import { FaQuoteLeft } from "react-icons/fa";
 function CarouselCard({cardData}) {
   //unfinished what are the things that should be included as props? (the card details eg.
   //title, content picture ALSO colors of the card, the glow effect)
@@ -55,11 +56,11 @@ function CarouselCard({cardData}) {
         duration: 1
        }}>
         {iconComponent}
-            <h1 className="font-spaceMono text-[22px] text-center"
+            <h1 className="font-spaceMono text-[22px] text-center m-auto w-[80%] bg-zinc-50 rounded-3xl p-3"
             style={{  
               transform: "translateZ(155px)",
               transformStyle: "preserve-3d",
-              color: isHovered ? "white" : color,  
+              color: isHovered ? color : color,  
             }}>
               {content}
             </h1>
@@ -69,7 +70,7 @@ function CarouselCard({cardData}) {
   
   const UnhoveredContent = () => {
     return(
-      <motion.div className=""
+      <motion.div className="flex p-3 md:h-[400px] sm:h-auto border-black"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0.2}}
@@ -78,7 +79,13 @@ function CarouselCard({cardData}) {
         type: 'spring'
        }}
       >
-            <h1 className="font-spaceMono text-[32px] text-center"
+          <div className="absolute top-0 flex gap-x-2 mt-3 mx-3">
+          <div className="h-4 w-4 bg-red-500 rounded-full"/>
+          <div className="h-4 w-4 bg-orange-500 rounded-full"/>
+          <div className="h-4 w-4 bg-green-500 rounded-full"/>
+        </div>
+            <FaQuoteLeft size={30} color={color}/>
+            <h1 className="font-spaceMono font-bold text-[42px] text-center w-[380px] uppercase"
             style={{  
               transform: "translateZ(155px)",
               transformStyle: "preserve-3d",
@@ -86,15 +93,13 @@ function CarouselCard({cardData}) {
             }}>
               {title}
             </h1>
+            <FaQuoteLeft size={30} color={color}/>
       </motion.div>
     )
   }
 
   return (
     <section className="relative">
-
-
-
       <motion.div className="relative z-10 h-[600px] w-[500px] bg-stone-300 border-stone-900 rounded-xl"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}

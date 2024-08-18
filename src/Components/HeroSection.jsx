@@ -71,12 +71,16 @@ function HeroSection({contactButtonHandler}) {
                     </p>
                     
                     <div className="grid h-[100px] w-100% align-center">
-                        <button type="button" className="m-auto text-white font-bold py-4 px-8 rounded-full 
-                        shadow-md hover:shadow-lg bg-gradient-to-r from-purple-500 to-pink-500"
+                        <motion.button type="button" className="m-auto text-white font-bold py-4 px-8 rounded-full 
+                        shadow-md hover:shadow-lg bg-gradient-to-r from-purple-500 to-pink-500 "
                         onClick={() => contactButtonHandler()}
+                        whileHover={{ 
+                            scale: 1.1,
+                            transition: { duration: 0.3 },
+                        }}
                         >
                         Contact Me!
-                        </button>
+                        </motion.button>
                     </div>
 
                 </div>
